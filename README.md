@@ -28,6 +28,10 @@ The following objects are masked from ‘package:base’:
 
 The current working directory is:  /home/jim/Desktop/Getting and Cleaning Data/project/UCI HAR Dataset 
 
+Please wait while the tidy data set is produced from the raw data... 
+
+Tidy data saved to file summary_data.txt 
+
 Source: local data frame [11,880 x 5]
 Groups: subject, activity
 
@@ -43,20 +47,6 @@ Groups: subject, activity
 9        1   LAYING tGravityAcc-mean()-Z  0.44581772 0.3883212
 10       1   LAYING  tGravityAcc-std()-X -0.89683002 0.1873622
 ..     ...      ...                  ...         ...       ...
->
-```
-## Loading the tidy data set
-
-Once the run_analysis.R script has been run, the tidy data set it produces can be loaded into a new R variable and (partially) displayed using command lines like the following:
-```
-> tidy_data<-read.table('summary_data.txt', header=TRUE)
-> head(tidy_data)
-  subject activity           feature        mean       std
-1       1   LAYING tBodyAcc-mean()-X  0.22159824 0.1689304
-2       1   LAYING tBodyAcc-mean()-Y -0.04051395 0.1186758
-3       1   LAYING tBodyAcc-mean()-Z -0.11320355 0.1740471
-4       1   LAYING  tBodyAcc-std()-X -0.92805647 0.1229574
-5       1   LAYING  tBodyAcc-std()-Y -0.83682741 0.3311775
-6       1   LAYING  tBodyAcc-std()-Z -0.82606140 0.2885529
 > 
+
 ```
