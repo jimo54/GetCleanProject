@@ -16,7 +16,7 @@ The run_analysis.R script assumes that the working directory is the top-level di
 > source('run_analysis.R')
 > run()
 ```
-Attaching package: ‘dplyr’
+<pre>Attaching package: ‘dplyr’
 
 The following objects are masked from ‘package:stats’:
 
@@ -43,4 +43,5 @@ Groups: subject, activity
 9        1   LAYING tGravityAcc-mean()-Z  0.44581772 0.3883212
 10       1   LAYING  tGravityAcc-std()-X -0.89683002 0.1873622
 ..     ...      ...                  ...         ...       ...
-
+>
+</pre>
