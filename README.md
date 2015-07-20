@@ -43,4 +43,4 @@ Groups: subject, activity
 9        1   LAYING tGravityAcc-mean()-Z  0.44581772 0.3883212
 10       1   LAYING  tGravityAcc-std()-X -0.89683002 0.1873622
 ..     ...      ...                  ...         ...       ...
-> 
+
