@@ -16,7 +16,7 @@ The run_analysis.R script assumes that the working directory is the top-level di
 > source('run_analysis.R')
 > run()
 
-<pre>Attaching package: ‘dplyr’
+Attaching package: ‘dplyr’
 
 The following objects are masked from ‘package:stats’:
 
