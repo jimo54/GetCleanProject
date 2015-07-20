@@ -1,4 +1,4 @@
-## First, load the librarys needed
+## First, load the libraries we need
 ## to produce the tidy data set
 library(dplyr)
 library(reshape2)
