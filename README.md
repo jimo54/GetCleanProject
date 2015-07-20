@@ -12,10 +12,10 @@ The run_analysis.R script produces a tidy data set in the "narrow" format, one o
 
 ## Running the script
 The run_analysis.R script assumes that the working directory is the top-level directory of the data after it is unzipped: UCI HAR Dataset. The script contains a single function, named run(), that loads data from the files in the data set and then subsets, reshapes and summarizes it to produce a tidy data set in "narrow" form. Once the script has produced the tidy data set, the data set is written to a file called summary_data.txt, in the working directory, and the first 10 lines of the data.frame are written to the console. The total time required is approximately 30 seconds on a 7-year old computer running Ubuntu 12.04. A sample run of the script is shown below.
-
+```
 > source('run_analysis.R')
 > run()
-
+```
 Attaching package: ‘dplyr’
 
 The following objects are masked from ‘package:stats’:
