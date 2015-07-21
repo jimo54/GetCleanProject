@@ -5,12 +5,13 @@
 subject
 
       Subject
-          Integer values from 1 through 30, which identify the study volunteer
+          Integer values from 1 through 30, which identify the study volunteer in the original 
+          data set.
           
 activity
 
       Activity
-         One of following six activities for which measurements were taken
+         One of following six activities for which measurements were taken in the study.
           1. WALKING
           2. WALKING_UPSTAIRS
           3. WALKING_DOWNSTAIRS
