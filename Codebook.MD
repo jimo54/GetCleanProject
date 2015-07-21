@@ -21,8 +21,8 @@ activity
 feature
 
       Feature
-        One of the following 66 measurements on the mean and standard deviation for each measurement taken in the
-        study. Feature names are the same as those in the original data set.
+        One of the following 66 measurements on the mean and standard deviation for each measurement
+        taken in the study. Feature names are the same as those in the original data set.
         1. tBodyAcc-mean()-X
         2. tBodyAcc-mean()-Y
         3. tBodyAcc-mean()-Z
@@ -93,12 +93,13 @@ feature
 mean
 
       Mean
-      The mean value of the given feature measurements for the given subject and activity. This value is calculated as
-      the mean for all values for this feature for the subject and activity in the original data set.
+      The mean value of the given feature measurements for the given subject and activity. 
+      This value is calculated as the mean for all values for this feature for the subject 
+      and activity in the original data set.
 
 std
 
       Standard deviation
-      The standard deviation among the given feature measurements for the given subject and activity. This value is
-      calculated as the standard deviation among all values for this feature for the subject and activity in the
-      original data set.
+      The standard deviation among the given feature measurements for the given subject and 
+      activity. This value is calculated as the standard deviation among all values for this
+      feature for the subject and activity in the original data set.
