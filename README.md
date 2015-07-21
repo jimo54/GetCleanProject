@@ -1,8 +1,8 @@
 # GetCleanProject
 ## Included files
 In addition to this README file, this repository contains
-* An R script, named run_analysis.R, which produces the tidy data for Step #5 of the project from the raw data
-* A codebook, named Codebook.md, which describes the variables in my tidy data set
+* An R script, named run_analysis.R, which produces the tidy data for Step #5 of the project from the raw data. The script is liberally commented to explain each step of the process to subset, reshape and summarize the data.
+* A codebook, named Codebook.md, which describes the variables in the tidy data set produced by the script.
 
 ## The run_analysis.R script
 The run_analysis.R script produces a tidy data set in the "narrow" format, one of the two options described in the project assignment. The dimensions of this data set are 11880 x 5, as described in the following discussion post from the course Web site: https://class.coursera.org/getdata-030/forum/thread?thread_id=86.
