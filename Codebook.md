@@ -5,8 +5,8 @@
 subject
 
       Subject
-          Integer values from 1 through 30, which identify the study volunteer in the original 
-          data set.
+          Integer values from 1 through 30, which identify the study volunteer associated with the
+          given observation.
           
 activity
 
@@ -94,13 +94,12 @@ feature
 mean
 
       Mean
-         The mean value of the given feature measurements for the given subject and activity. 
-         This value is calculated as the mean for all values for this feature for the subject 
-         and activity in the original data set.
+         The mean value of the given feature measurements for the given subject and activity, calculated 
+         as the mean of all values for this feature for the subject and activity in the data set.
 
 std
 
       Standard deviation
-         The standard deviation among the given feature measurements for the given subject and 
-         activity. This value is calculated as the standard deviation among all values for this
-         feature for the subject and activity in the original data set.
+         The standard deviation among the given feature measurements for the given subject and activity, 
+         calculated as the standard deviation among all values for this feature for the subject and 
+         activity in the data set.
