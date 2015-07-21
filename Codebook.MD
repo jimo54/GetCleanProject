@@ -5,15 +5,12 @@
 subject
 
       Subject
-      
           Integer values from 1 through 30, which identify the study volunteer
           
 activity
 
       Activity
-      
           One of following six activities for which measurements were taken
-          
           1. WALKING
           2. WALKING_UPSTAIRS
           3. WALKING_DOWNSTAIRS
@@ -24,10 +21,8 @@ activity
 feature
 
       Feature
-      
         One of the following 66 measurements on the mean and standard deviation for each measurement taken in the
         study. Feature names are the same as those in the original data set.
-        
         1. tBodyAcc-mean()-X
         2. tBodyAcc-mean()-Y
         3. tBodyAcc-mean()-Z
@@ -96,11 +91,13 @@ feature
         66. fBodyBodyGyroJerkMag-std()
 
 mean
+
       Mean
       The mean value of the given feature measurements for the given subject and activity. This value is calculated as
       the mean for all values for this feature for the subject and activity in the original data set.
 
 std
+
       Standard deviation
       The standard deviation among the given feature measurements for the given subject and activity. This value is
       calculated as the standard deviation among all values for this feature for the subject and activity in the
