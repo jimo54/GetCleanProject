@@ -2,16 +2,16 @@
 ## Included files
 In addition to this README file, this repository contains
 * An R script, named run_analysis.R, which produces the tidy data for Step #5 of the project from the raw data
-* A codebook, named CodeBook.md, that describes the variables in my tidy data set
+* A codebook, named Codebook.md, which describes the variables in my tidy data set
 
 ## The run_analysis.R script
 The run_analysis.R script produces a tidy data set in the "narrow" format, one of the two options described in the project assignment. The dimensions of this data set are 11880 x 5, as described in the following discussion post from the course Web site: https://class.coursera.org/getdata-030/forum/thread?thread_id=86.
-* The number of rows is based on 30 subjects performing 6 activites, including total of 66 mean and standard-deviation measurements for each. That's 30 * 6 * 66 = 11880.
-* The five columns are subject, activity, feature, mean and std. This data provides summary data for each mean and std feature, grouped by each the subject and activity. 
-* The 66 features were selected using a regular expression that matched only features that included the text 'mean() and std() in the feature labels. This matching produces the same number (33 each) of mean() and std() averages from among the measurements, which makes the most sense in my opinion. Several other feature names that include "mean" in their names, such as fBodyAcc-meanFreq()-X or fBodyAccJerk-meanFreq()-X do not appear to hold summary information, especially in that there is no matching standard deviation field for these measurements.
+* The number of rows is based on 30 subjects each performing 6 activites, including a total of 66 mean and standard-deviation measurements for each subject/activity. That's 30 * 6 * 66 = 11880.
+* The five columns are subject, activity, feature, mean and std. This data provides summary data for each mean and std feature, grouped by each the subject and activity. Details are given in Codebook.md.
+* The 66 features were selected using a regular expression that matched only features that included the text 'mean()' and 'std()' in the feature labels of the original data set. This matching produces the same number (33 each) of mean() and std() averages from among the measurements, which makes the most sense in my opinion. Several other feature names that include "mean" in their names, such as fBodyAcc-meanFreq()-X or fBodyAccJerk-meanFreq()-X do not appear to hold summary information, especially in that there is no matching standard deviation field for these features.
 
 ## Running the script
-The run_analysis.R script assumes that the working directory is the top-level directory of the data after it is unzipped: UCI HAR Dataset. The script contains a single function, named run(), that loads data from the files in the data set and then subsets, reshapes and summarizes it to produce a tidy data set in "narrow" form. Once the script has produced the tidy data set, the data set is written to a file called summary_data.txt, in the working directory, and the first 10 lines of the data.frame are written to the console. The total time required is approximately 30 seconds on a 7-year old computer running Ubuntu 12.04. A sample run of the script is shown below.
+The run_analysis.R script assumes that the working directory is the top-level directory of the data set after it is unzipped: UCI HAR Dataset. The script contains a single function, named run(), that loads data from the files in the data set and then subsets, reshapes and summarizes it to produce a tidy data set in "narrow" form. Once the script has produced the tidy data set, the data set is written to a file called summary_data.txt, in the working directory, and the first 10 lines of the data.frame are also written to the console. The total time required for the script to run is approximately 30 seconds on a 7-year old iMac computer running Ubuntu 12.04. A sample run of the script is shown below.
 ```
 > source('run_analysis.R')
 > run()
