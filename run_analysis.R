@@ -11,13 +11,14 @@ labels<-read.table('activity_labels.txt',stringsAsFactors=FALSE)
 train_subject<-read.table('train/subject_train.txt')
 train_y<-read.table('train/y_train.txt')
 
-# Replace activities numeric values with matching character labels
+# Replace activities numeric values with the 
+# matching character labels
 for(i in 1:6) {
    train_y[train_y[,1]==labels[i,1],]<-labels[i,2]
 }
 
-# Read in the train measurement data and 
-# bind the subject and activities columns to it
+# Read in the train measurement data and bind the
+# associated subject and activities columns to it
 train_x<-read.table('train/X_train.txt')
 train<-cbind(train_subject, train_y, train_x)
 
@@ -25,36 +26,37 @@ train<-cbind(train_subject, train_y, train_x)
 test_subject<-read.table('test/subject_test.txt')
 test_y<-read.table('test/y_test.txt')
 
-# Replace activities key values with matching descriptive labels
+# Replace activities key values with the 
+# matching descriptive labels
 for(i in 1:6) {
    test_y[test_y[,1]==labels[i,1],]<-labels[i,2]
 }
 
-# Read in the train measurement data and 
-# bind the subject and activities columns to it
+# Read in the test measurement data and bind the
+# associated subject and activities columns to it
 test_x<-read.table('test/X_test.txt')
 test<-cbind(test_subject, test_y, test_x)
 
-# Now bind the two data sets together
+# Now bind the train and test data together
 dataset<-rbind(train,test)
 
-# Set the names for all the variables
+# Set the names for all the feature variables
 names(dataset)<-c('subject','activity',features[,2])
 
 # Keep only the measurements on the mean and 
 # standard deviation for each measurement. 
 dataset<-dataset[,grep('subject|activity|mean\\(\\)|std\\(\\)', colnames(dataset))]
 
-# Sort the data by subject and then activity
+# Sort the data, first by subject and then activity
 dataset<-arrange(dataset, subject, activity)
 
 # And, now, for Step #5!
-## First, melt the dataset into rows based on subject and activity,
-## using the reshape2 library's melt function
+## First, melt the dataset into rows based on subject 
+## and activity, using the reshape2 library's melt function
 melted_data<-melt(dataset,id.vars=c('subject','activity'),variable.name='feature')
 
-## Next, group the melted data by subject, activity and feature
-##  using the dplyr library's group_by function
+## Next, group the melted data by subject, activity and 
+##  feature, using the dplyr library's group_by function
 grouped_data<-group_by(melted_data, subject, activity, feature)
 
 ## Finally, summarise() the grouped data to show the
